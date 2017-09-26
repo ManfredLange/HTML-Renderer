@@ -27,7 +27,6 @@ This repository is a fork of [Arthur Hub's HtmlRenderer](https://github.com/Arth
 * Support text selection, copy-paste and context menu.
 * WinForms controls: HtmlPanel, HtmlLabel and HtmlToolTip.
 * WPF controls: HtmlPanel and HtmlLabel.
-* Works on Mono.
 * Create images from HTML snippets.
 * Handles "real world" malformed HTML, it doesn't have to be XHTML.
 * 100% managed code and no external dependencies.

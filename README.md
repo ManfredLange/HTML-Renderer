@@ -19,6 +19,7 @@ I do not have time to provide support for this library. However, if you have a f
 
 This repository is a fork of [Arthur Hub's HtmlRenderer](https://github.com/ArthurHub/HTML-Renderer). More details available there.
 
+HtmlRenderer.PdfSharp from this fork works in Microsoft Azure App Service including custom fonts. No font installation required on the server. Last tested on 27 September 2017.
 
 ### Features and Benefits
 * Extensive HTML 4.01 and CSS level 2 specifications support.
@@ -29,10 +30,10 @@ This repository is a fork of [Arthur Hub's HtmlRenderer](https://github.com/Arth
 * WPF controls: HtmlPanel and HtmlLabel.
 * Create images from HTML snippets.
 * Handles "real world" malformed HTML, it doesn't have to be XHTML.
-* 100% managed code and no external dependencies.
-* Supports .NET 2.0 or higher including Client Profile.
+* 100% managed code with only dependency being PdfSharp
 * Lightweight, just two DLLs (~300K).
 * High performance and low memory footprint.
 * Extendable and configurable.
 * Includes sample applications to explore and learn the library.
 * Sample for a console application, a WinForms application and a WPF application 
+* Runs in Microsoft Azure App Service (last tested 27 Sep 2017)

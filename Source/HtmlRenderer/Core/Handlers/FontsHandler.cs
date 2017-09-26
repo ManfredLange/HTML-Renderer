@@ -74,6 +74,13 @@ namespace TheArtOfDev.HtmlRenderer.Core.Handlers
                     exists = _existingFontFamilies.ContainsKey(mappedFamily);
                 }
             }
+
+            if (!exists) 
+            {
+                // Not found in existing ones but perhaps the adapter can get it for us:
+                exists = _adapter.GetFont(family, 10.0, RFontStyle.Regular) != null;
+            }
+
             return exists;
         }
 

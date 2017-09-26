@@ -20,6 +20,7 @@ using TheArtOfDev.HtmlRenderer.Demo.Common;
 using TheArtOfDev.HtmlRenderer.PdfSharp;
 using TheArtOfDev.HtmlRenderer.WinForms;
 using PdfSharp;
+using PdfSharp.Fonts;
 
 namespace TheArtOfDev.HtmlRenderer.Demo.WinForms
 {
@@ -63,8 +64,17 @@ namespace TheArtOfDev.HtmlRenderer.Demo.WinForms
             _generatePdfTSB.Enabled = !HtmlRenderingHelper.IsRunningOnMono();
         }
 
+        static DemoForm() {
+            // Tell PdfSharp to use our FontResolver for when we want to generate a PDF 
+            // file using HtmlRenderer.PdfSharp. This is not required for using custom
+            // fonts in a forms-based window. This call is in the static constructor as
+            // PdfSharp does not allow setting it more than once.
+            GlobalFontSettings.FontResolver = new FontResolver();
+        }
+
         /// <summary>
-        /// Load custom fonts to be used by renderer HTMLs
+        /// Load custom fonts to be used by renderer HTMLs. Note this is used for the
+        /// forms-based windows but not required when generating a PDF file.
         /// </summary>
         private void LoadCustomFonts()
         {
